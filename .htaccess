@@ -1,0 +1,10 @@
+# Définir index.php comme fichier par défaut (priorité sur index.html)
+DirectoryIndex index.php index.html
+
+# Parser les fichiers .html comme PHP (pour include menu-dynamic.php)
+AddType application/x-httpd-php .html
+
+# Activer le suivi des erreurs PHP (optionnel, pour debug)
+# php_flag display_errors On
+# php_value error_reporting E_ALL
+

@@ -1,0 +1,11 @@
+# Version simplifiée du .htaccess
+# Si la version principale cause des erreurs, renommez ce fichier en .htaccess
+
+# Définir index.php comme fichier par défaut
+DirectoryIndex index.php
+
+# Protection contre le listing des répertoires
+Options -Indexes
+
+
+

@@ -1,0 +1,1123 @@
+
+/*** Spinner Start ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+/*** Spinner End ***/
+
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    transition: 0.5s;
+    z-index: 99;
+}
+
+.chat-button {
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    transition: all 0.3s ease;
+    z-index: 99;
+    box-shadow: 0 4px 15px rgba(22, 36, 61, 0.3);
+    animation: pulse 2s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.chat-button:hover {
+    transform: scale(1.15) translateY(-5px);
+    box-shadow: 0 8px 25px rgba(22, 36, 61, 0.5);
+    text-decoration: none;
+}
+
+.chat-button i {
+    font-size: 1.5rem;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 15px rgba(22, 36, 61, 0.3);
+    }
+    50% {
+        box-shadow: 0 6px 25px rgba(22, 36, 61, 0.6);
+    }
+    100% {
+        box-shadow: 0 4px 15px rgba(22, 36, 61, 0.3);
+    }
+}
+
+/* Responsive adjustments for chat button */
+@media (max-width: 768px) {
+    .chat-button {
+        right: 20px;
+        bottom: 90px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .back-to-top {
+        right: 20px;
+        bottom: 20px;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+/*** Button Start ***/
+.btn {
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-sm-square {
+    width: 34px;
+    height: 34px;
+}
+
+.btn-md-square {
+    width: 44px;
+    height: 44px;
+}
+
+.btn-lg-square {
+    width: 56px;
+    height: 56px;
+}
+
+.btn-xl-square {
+    width: 66px;
+    height: 66px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-md-square,
+.btn-lg-square,
+.btn-xl-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+.btn.btn-primary {
+    color: var(--bs-white);
+    border: none;
+}
+
+.btn.btn-primary:hover {
+    background: var(--bs-dark);
+    color: var(--bs-white);
+}
+
+.btn.btn-light {
+    color: var(--bs-primary);
+    border: none;
+}
+
+.btn.btn-light:hover {
+    color: var(--bs-white);
+    background: var(--bs-dark);
+}
+
+.btn.btn-dark {
+    color: var(--bs-white);
+    border: none;
+}
+
+.btn.btn-dark:hover {
+    color: var(--bs-primary);
+    background: var(--bs-light);
+}
+
+
+/*** Topbar Start ***/ 
+.topbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    vertical-align: middle;
+    margin-left: 8px;
+    color: var(--bs-primary);
+}
+
+.topbar .dropdown .dropdown-menu a:hover {
+    background: var(--bs-primary);
+    color: var(--bs-white);
+}
+
+.topbar .dropdown .dropdown-menu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    background: var(--bs-light);
+    padding-top: 10px;
+    border: 0;
+    transition: .5s;
+    opacity: 1;
+}
+/*** Topbar End ***/
+
+
+/*** Navbar Start ***/
+.nav-bar {
+    background: var(--bs-white);
+    transition: 1s;
+}
+
+.navbar-light .navbar-brand img {
+    max-height: 60px;
+    transition: .5s;
+}
+
+.nav-bar .navbar-light .navbar-brand img {
+    max-height: 50px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    padding: 0;
+}
+
+.navbar .navbar-nav .nav-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.navbar-light .navbar-nav .nav-item:hover,
+.navbar-light .navbar-nav .nav-item.active,
+.navbar-light .navbar-nav .nav-item:hover .nav-link,
+.navbar-light .navbar-nav .nav-item.active .nav-link {
+    color: var(--bs-primary);
+}
+
+@media (max-width: 991px) {
+    .navbar {
+        padding: 20px 0;
+    }
+
+    .navbar .navbar-nav .nav-link {
+        padding: 0;
+    }
+
+    .navbar .navbar-nav .nav-item {
+        display: flex;
+        padding: 20px;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .navbar .navbar-nav .nav-btn {
+        display: flex;
+        justify-content: start;
+    }
+
+    .navbar .navbar-nav {
+        width: 100%;
+        display: flex;
+        margin-top: 20px;
+        padding-bottom: 20px;
+        background: var(--bs-light);
+        border-radius: 10px;
+    }
+
+    .navbar.navbar-expand-lg .navbar-toggler {
+        padding: 8px 15px;
+        border: 1px solid var(--bs-primary);
+        color: var(--bs-primary);
+    }
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.dropdown .dropdown-menu .dropdown-item:hover {
+    background: var(--bs-primary);
+    color: var(--bs-white);
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        padding: 20px 0;
+    }
+
+    .navbar .nav-btn {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+    .navbar .navbar-nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--bs-light);
+        border-radius: 10px;
+    }
+
+    .navbar .navbar-nav .nav-btn {
+        width: 100%;
+        display: flex;
+        margin-left: auto;
+    }
+
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        visibility: hidden;
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        border: 0;
+        border-radius: 10px;
+        transition: .5s;
+        opacity: 0;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        transform: rotateX(0deg);
+        visibility: visible;
+        margin-top: 20px;
+        background: var(--bs-light);
+        transition: .5s;
+        opacity: 1;
+    }
+}
+/*** Navbar End ***/
+
+
+/*** Single Page Hero Header Start ***/
+.bg-breadcrumb {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/bg-breadcrumb.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0 60px 0;
+    transition: 0.5s;
+}
+
+.bg-breadcrumb .breadcrumb {
+    position: relative;
+}
+
+.bg-breadcrumb .breadcrumb .breadcrumb-item a {
+    color: var(--bs-white) !important;
+}
+.bg-breadcrumb .breadcrumb .breadcrumb-item,
+.bg-breadcrumb .breadcrumb .breadcrumb-item.active,
+.bg-breadcrumb .breadcrumb .breadcrumb-item a:hover {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+/*** Single Page Hero Header End ***/
+
+
+/*** Service Start ***/
+.service .service-item {
+    border-radius: 10px;
+}
+.service .service-item .service-img {
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.service .service-item .service-img img {
+    transition: 0.5s;
+}
+
+.service .service-item:hover .service-img img {
+    transform: scale(1.1);
+}
+
+.service .service-item .service-img::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: rgba(1, 95, 201, .2);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.service .service-item:hover .service-img::after {
+    height: 100%;
+}
+
+.service .service-item .service-img .service-icon {
+    position: absolute;
+    width: 70px;
+    bottom: 0;
+    right: 25px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: var(--bs-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: 9;
+}
+
+.service .service-item .service-img .service-icon i {
+    color: var(--bs-primary);
+    transition: 0.5s;
+}
+
+.service .service-item:hover .service-img .service-icon i {
+    transform: rotateX(360deg);
+    color: var(--bs-white);
+}
+
+.service .service-item:hover .service-img .service-icon {
+    bottom: 0;
+    color: var(--bs-white);
+    background: var(--bs-primary);
+}
+
+.service .service-content {
+    position: relative;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: var(--bs-light);
+}
+
+.service .service-item .service-content .service-content-inner {
+    position: relative;
+    z-index: 9;
+}
+
+.service .service-item .service-content .service-content-inner .h4,
+.service .service-item .service-content .service-content-inner p {
+    transition: 0.5s;
+}
+
+.service .service-item:hover .service-content .service-content-inner .h4,
+.service .service-item:hover .service-content .service-content-inner p {
+    color: var(--bs-white);
+}
+
+.service .service-item:hover .service-content .service-content-inner .btn.btn-primary {
+    color: var(--bs-primary);
+    background: var(--bs-white);
+}
+
+.service .service-item:hover .service-content .service-content-inner .btn.btn-primary:hover {
+    color: var(--bs-white);
+    background: var(--bs-dark);
+}
+
+.service .service-item:hover .service-content .service-content-inner .h4:hover {
+    color: var(--bs-dark);
+}
+
+.service .service-item .service-content::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: var(--bs-primary);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.service .service-item:hover .service-content::after {
+    height: 100%;
+}
+/*** Service End ***/
+
+
+/*** Blog Start ***/
+.blog .blog-item {
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.blog .blog-item:hover {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .1);
+}
+
+.blog .blog-item:hover .blog-content {
+    background: var(--bs-light);
+}
+
+.blog .blog-item .blog-img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.blog .blog-item .blog-img img {
+    transition: 0.5s;
+}
+
+.blog .blog-item:hover .blog-img img {
+    transform: scale(1.2);
+}
+
+.blog .blog-item .blog-img::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: rgba(1, 95, 201, .2);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.blog .blog-item:hover .blog-img::after {
+    height: 100%;
+}
+
+.blog .blog-item .blog-img .blog-categiry {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 10px;
+    display: inline-flex;
+    color: var(--bs-white);
+    background: var(--bs-primary);
+    z-index: 9;
+}
+
+.blog .blog-item .blog-content {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: var(--bs-white);
+}
+
+.blog .blog-item .blog-content a.btn {
+    color: var(--bs-dark);
+}
+
+.blog .blog-item:hover .blog-content a.btn:hover {
+    color: var(--bs-primary);
+}
+/*** Blog End ***/
+
+
+/*** Team Start ***/
+.team .team-item .team-img {
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+} 
+
+.team .team-item .team-img img {
+    transition: 0.5s;
+}
+
+.team .team-item:hover .team-img img {
+    transform: scale(1.1);
+}
+
+.team .team-item .team-img::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: 0.5s;
+}
+
+.team .team-item:hover .team-img::after {
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.team .team-item .team-img .team-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    margin-bottom: -100%;
+    transition: 0.5s;
+    z-index: 9;
+}
+
+.team .team-item:hover .team-img .team-icon {
+    margin-bottom: 0;
+}
+
+.team .team-item .team-title {
+    color: var(--bs-white);
+    background: var(--bs-primary);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.5s;
+}
+
+.team .team-item .team-title h4 {
+    color: var(--bs-white);
+}
+
+.team .team-item:hover .team-title {
+    background: var(--bs-dark);
+}
+/*** Team End ***/
+
+
+/*** Footer Start - COMPLETELY ISOLATED FROM OTHER CONTENT ***/
+/* Reset all possible inherited styles */
+.footer,
+.container-fluid.footer,
+div.footer,
+div.container-fluid.footer {
+    /* Reset all margins and paddings */
+    margin: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+    padding-top: 3rem !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    
+    /* Force full width */
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 100vw !important;
+    
+    /* Isolate from parent containers */
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    
+    /* Background and display */
+    background: var(--bs-dark) !important;
+    background-color: #16243D !important;
+    display: block !important;
+    box-sizing: border-box !important;
+    
+    /* Remove all Bootstrap variables that could affect it */
+    --bs-gutter-x: 0 !important;
+    --bs-gutter-y: 0 !important;
+    
+    /* Isolate from any parent styles */
+    clear: both !important;
+    float: none !important;
+}
+
+/* Override py-5 class completely for footer */
+.footer.py-5,
+.container-fluid.footer.py-5,
+div.footer.py-5,
+div.container-fluid.footer.py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Footer inner container - completely isolated */
+.container-fluid.footer > .container,
+.footer > .container,
+div.container-fluid.footer > div.container {
+    margin: 0 auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* ISOLATE FOOTER FROM ALL PARENT CONTAINERS - Override any parent constraints */
+body > .container-fluid.footer,
+body > * > .container-fluid.footer,
+body > div.container-fluid.footer,
+* > .container-fluid.footer,
+* > div.footer,
+.container-fluid.footer {
+    /* Break out of any parent container */
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    left: 50% !important;
+    right: 50% !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    
+    /* Isolate from parent styles */
+    position: relative !important;
+    z-index: 1 !important;
+    
+    /* Remove all inherited styles */
+    border: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Footer inner elements - completely isolated */
+.container-fluid.footer .row,
+.footer .row,
+.container-fluid.footer .col-lg-3,
+.footer .col-lg-3,
+.container-fluid.footer .col-md-6,
+.footer .col-md-6 {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Prevent horizontal scroll */
+html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+}
+
+/* Ensure body doesn't add margins that affect footer */
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Remove any margin/padding after footer */
+body > .container-fluid.footer:last-child,
+body > *:last-child.container-fluid.footer {
+    margin-bottom: 0 !important;
+}
+
+/* Ensure no white space after footer */
+html {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Remove margin from back-to-top button if it's after footer */
+.back-to-top {
+    margin-bottom: 0 !important;
+}
+
+/* Remove any spacing after footer - ensure footer is the last element with no margin */
+.container-fluid.footer:last-of-type {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Ensure no white space at the bottom of the page */
+body::after {
+    display: none !important;
+    content: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Remove any min-height that could create white space */
+body {
+    min-height: auto !important;
+    height: auto !important;
+}
+
+/* Ensure html doesn't create white space */
+html {
+    height: auto !important;
+    min-height: auto !important;
+}
+
+/* PREVENT ANY ELEMENT BEFORE FOOTER FROM AFFECTING IT */
+.testimonials-section + .container-fluid.footer,
+.testimonials-section + div.footer,
+* + .container-fluid.footer,
+* + div.footer {
+    margin-top: 0 !important;
+    padding-top: 3rem !important;
+}
+
+/* ISOLATE FOOTER - Prevent inheritance from any parent */
+.container-fluid.footer * {
+    box-sizing: border-box !important;
+}
+
+/* Footer should not inherit any styles from parent sections */
+.testimonials-section ~ .container-fluid.footer,
+.container-fluid.testimonials-section ~ .container-fluid.footer {
+    margin-top: 0 !important;
+    padding-top: 3rem !important;
+    clear: both !important;
+}
+
+/* COMPLETE ISOLATION - Footer is independent from everything */
+/* Remove any margin from elements after footer */
+body > *:last-child:not(.container-fluid.footer):not(.footer) {
+    margin-bottom: 0 !important;
+}
+
+/* Remove all spacing after footer - target all possible elements */
+body > script,
+body > *:not(.container-fluid.footer):not(.footer) {
+    margin-bottom: 0 !important;
+}
+
+/* Ensure footer is truly the last visible element - nothing after it creates space */
+.container-fluid.footer + *,
+.footer + *,
+.container-fluid.footer ~ * {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Back to top button should not create space */
+.back-to-top {
+    position: fixed !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Footer should be the absolute last element */
+.container-fluid.footer:last-child,
+.footer:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* COMPLETE ISOLATION - Footer doesn't inherit anything from parent sections */
+.container-fluid.testimonials-section ~ .container-fluid.footer,
+.testimonials-section ~ .container-fluid.footer,
+.container-fluid.service ~ .container-fluid.footer,
+.service ~ .container-fluid.footer,
+.container-fluid.about ~ .container-fluid.footer,
+.about ~ .container-fluid.footer,
+* ~ .container-fluid.footer {
+    /* Reset all inherited properties */
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 3rem !important;
+    padding-bottom: 0 !important;
+    
+    /* Force isolation */
+    clear: both !important;
+    display: block !important;
+    position: relative !important;
+    
+    /* Break out of any parent */
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    left: 50% !important;
+    right: 50% !important;
+}
+
+/* Prevent any CSS from other sections affecting footer */
+.container-fluid.footer,
+.footer {
+    /* Override any possible inherited styles */
+    font-family: inherit !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    color: inherit !important;
+    text-align: inherit !important;
+    
+    /* Isolate from flexbox/grid parents */
+    flex: none !important;
+    order: 9999 !important;
+    align-self: stretch !important;
+}
+
+/* FINAL ISOLATION - Footer is completely independent */
+.container-fluid.footer {
+    /* Force all spacing to zero except top padding */
+    margin: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    
+    padding: 3rem 0 0 0 !important;
+    padding-top: 3rem !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    
+    /* Force full width */
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 100vw !important;
+    
+    /* Position to break out of containers */
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    
+    /* Background */
+    background: #16243D !important;
+    background-color: #16243D !important;
+    
+    /* Display */
+    display: block !important;
+    box-sizing: border-box !important;
+    clear: both !important;
+    
+    /* Remove any inherited styles */
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    
+    /* Override Bootstrap variables */
+    --bs-gutter-x: 0 !important;
+    --bs-gutter-y: 0 !important;
+}
+
+/* Ensure testimonials section doesn't affect footer */
+.testimonials-section {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Remove bottom padding from py-5 class on testimonials section */
+.testimonials-section.py-5 {
+    padding-bottom: 0 !important;
+    padding-top: 3rem !important;
+}
+
+/* Remove any bottom margin from testimonials inner container */
+.testimonials-section .container {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Remove bottom padding from py-5 class on testimonials container */
+.testimonials-section .container.py-5 {
+    padding-bottom: 0 !important;
+}
+
+.footer .footer-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .footer-item a {
+    line-height: 35px;
+    color: var(--bs-body);
+    transition: 0.5s;
+}
+
+.footer .footer-item p {
+    line-height: 35px;
+}
+
+.footer .footer-item a:hover {
+    color: var(--bs-primary);
+}
+
+.footer .footer-item .footer-btn a,
+.footer .footer-item .footer-btn a i {
+    transition: 0.5s;
+}
+
+.footer .footer-item .footer-btn a:hover {
+    background: var(--bs-white);
+}
+
+.footer .footer-item .footer-btn a:hover i {
+    color: var(--bs-primary);
+}
+
+
+.footer .footer-item .footer-instagram {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer .footer-item .footer-instagram img {
+    transition: 0.5s;
+}
+
+.footer .footer-item .footer-instagram:hover img {
+    transform: scale(1.2);
+}
+
+.footer .footer-item .footer-instagram .footer-search-icon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.footer .footer-item .footer-instagram:hover .footer-search-icon {
+    opacity: 1;
+    background: rgba(0, 0, 0, .6);
+}
+
+.footer .footer-item .footer-btn a {
+    background: var(--bs-light);
+    color: var(--bs-primary);
+}
+
+.footer .footer-item .footer-btn a:hover {
+    background: var(--bs-primary);
+}
+
+.footer .footer-item .footer-btn a:hover i {
+    color: var(--bs-white);
+}
+/* FINAL ISOLATION RULE - Footer is completely independent from all other content */
+/* This rule ensures footer is never affected by any parent, sibling, or child styles */
+.container-fluid.footer,
+div.container-fluid.footer,
+.footer,
+div.footer {
+    /* Complete isolation from all other CSS */
+    isolation: isolate !important;
+    contain: layout style paint !important;
+    
+    /* Override any possible inherited styles from any source */
+    margin: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    
+    padding: 3rem 0 0 0 !important;
+    padding-top: 3rem !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 100vw !important;
+    
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    
+    background: #16243D !important;
+    background-color: #16243D !important;
+    
+    display: block !important;
+    box-sizing: border-box !important;
+    clear: both !important;
+    float: none !important;
+    
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    
+    --bs-gutter-x: 0 !important;
+    --bs-gutter-y: 0 !important;
+    
+    /* Prevent any JavaScript from modifying these */
+    pointer-events: auto !important;
+}
+
+/*** Footer End ***/
+
+/*** FAQ Start ***/
+.accordion-button {
+    font-weight: 500;
+    color: #16243D;
+    background-color: #ffffff;
+    border: none;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--bs-primary);
+    background-color: #f8f9fa;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(22, 36, 61, 0.25);
+}
+
+.accordion-body {
+    color: #6c757d;
+    line-height: 1.8;
+    padding: 1.5rem;
+}
+
+.accordion-item {
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2316243D'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23007bff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+/*** FAQ End ***/
+
+
+
+/*** copyright Start ***/
+.copyright {
+    background: var(--bs-dark);
+    border-top: 1px solid rgba(255, 255, 255, .08);
+}
+/*** copyright end ***/
+
+

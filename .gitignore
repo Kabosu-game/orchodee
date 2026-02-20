@@ -1,0 +1,22 @@
+# Database config (credentials)
+config/database_production.php
+
+# Uploads (user content)
+uploads/*
+!uploads/.gitkeep
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+log/
+
+# Database exports (may contain API keys / secrets)
+database/*.sql
+orchidee_export_ready_import.sql
+*.sql

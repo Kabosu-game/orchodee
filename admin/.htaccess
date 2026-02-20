@@ -1,0 +1,16 @@
+# Définir index.php comme fichier par défaut
+DirectoryIndex index.php dashboard.php
+
+# Limites d'upload pour les vidéos (annonces)
+php_value upload_max_filesize 64M
+php_value post_max_size 64M
+php_value max_execution_time 120
+
+# Protection contre le listing des répertoires
+Options -Indexes
+
+# Empêcher l'accès direct aux fichiers sensibles (syntaxe Apache 2.4)
+<FilesMatch "\.(sql|log|md)$">
+    Require all denied
+</FilesMatch>
+

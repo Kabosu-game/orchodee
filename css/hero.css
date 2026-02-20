@@ -1,0 +1,84 @@
+/**
+ * Hero carousel - styles isolés
+ * Uniquement .hero-section .header-carousel - pas de conflit avec annonces ou image-carousel
+ */
+
+.hero-section .header-carousel .header-carousel-item {
+    height: 700px;
+}
+
+.hero-section .header-carousel .owl-nav .owl-prev,
+.hero-section .header-carousel .owl-nav .owl-next {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    background: var(--bs-light);
+    color: var(--bs-primary);
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.hero-section .header-carousel .owl-nav .owl-prev {
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 30px;
+}
+
+.hero-section .header-carousel .owl-nav .owl-next {
+    bottom: 30px;
+    right: 50%;
+    transform: translateX(-50%);
+    margin-right: 30px;
+}
+
+.hero-section .header-carousel .owl-nav .owl-prev:hover,
+.hero-section .header-carousel .owl-nav .owl-next:hover {
+    box-shadow: inset 0 0 100px 0 var(--bs-secondary);
+    color: var(--bs-white);
+}
+
+.hero-section .header-carousel .header-carousel-item .carousel-caption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .2);
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 991px) {
+    .hero-section .header-carousel .header-carousel-item .carousel-caption {
+        padding-top: 45px;
+    }
+
+    .hero-section .header-carousel .header-carousel-item {
+        height: 1300px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-section .header-carousel .header-carousel-item {
+        height: 950px;
+    }
+
+    .hero-section .header-carousel .owl-nav .owl-prev {
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: -45px;
+    }
+
+    .hero-section .header-carousel .owl-nav .owl-next {
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 45px;
+    }
+}

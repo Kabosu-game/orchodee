@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>NCLEX Registration - Orchidee LLC | Sign Up for NCLEX Session</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:slnt,wght@-10..0,100..900&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="lib/animate/animate.min.css"/>
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <?php include 'includes/menu-dynamic.php'; ?>
+
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/ban.jpeg') center/cover no-repeat;">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">NCLEX Registration</h4>
+                <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active text-primary">NCLEX Registration</li>
+                </ol>    
+            </div>
+        </div>
+        <!-- Header End -->
+
+
+        <!-- Registration Forms Start -->
+        <div class="container-fluid contact bg-light py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary">Get Started</h4>
+                    <h1 class="display-4 mb-4">NCLEX Registration Forms</h1>
+                    <p class="mb-0">Complete your registration to join our NCLEX preparation program. Fill out the session sign-up form and the NCLEX registration form to get started on your journey.</p>
+                </div>
+
+                <!-- Tabs Navigation -->
+                <div class="row justify-content-center mb-4">
+                    <div class="col-lg-10">
+                        <ul class="nav nav-pills nav-justified mb-4" id="registrationTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="session-tab" data-bs-toggle="tab" data-bs-target="#session-form" type="button" role="tab" aria-controls="session-form" aria-selected="true">
+                                    <i class="fa fa-calendar-check me-2"></i>Session Sign Up
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="registration-tab" data-bs-toggle="tab" data-bs-target="#registration-form" type="button" role="tab" aria-controls="registration-form" aria-selected="false">
+                                    <i class="fa fa-file-alt me-2"></i>NCLEX Registration
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="tab-content" id="registrationTabsContent">
+                            
+                            <!-- Session Sign Up Form -->
+                            <div class="tab-pane fade show active" id="session-form" role="tabpanel" aria-labelledby="session-tab">
+                                <div class="bg-white rounded p-5 shadow-sm wow fadeInUp" data-wow-delay="0.2s">
+                                    <div class="text-center mb-4">
+                                        <h3 class="text-primary mb-2">Sign Up for Your Next NCLEX Session</h3>
+                                        <p class="text-muted">Fill out the form below to secure your spot in our upcoming NCLEX preparation session.</p>
+                                    </div>
+                                    
+                                    <form id="sessionSignUpForm">
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control border-0" id="sessionFirstName" placeholder="First Name" required>
+                                                    <label for="sessionFirstName">First Name *</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control border-0" id="sessionLastName" placeholder="Last Name" required>
+                                                    <label for="sessionLastName">Last Name *</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-floating">
+                                                    <input type="email" class="form-control border-0" id="sessionEmail" placeholder="Email" required>
+                                                    <label for="sessionEmail">Email *</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-floating">
+                                                    <input type="tel" class="form-control border-0" id="sessionPhone" placeholder="Phone" required>
+                                                    <label for="sessionPhone">Phone *</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control border-0" id="nursingSchool" placeholder="Nursing School Name" required>
+                                                    <label for="nursingSchool">Nursing School Name *</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control border-0" id="yearsAttended" placeholder="Years Attended" required>
+                                                    <label for="yearsAttended">Years Attended *</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label class="form-label">Select One Session From The Following Options *</label>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="sessionType" id="session3Months" value="3-months" required>
+                                                    <label class="form-check-label" for="session3Months">
+                                                        3 Months
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input class="form-check-input" type="radio" name="sessionType" id="session6Months" value="6-months" required>
+                                                    <label class="form-check-label" for="session6Months">
+                                                        6 Months
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label class="form-label">Have You Started The Process For Your Credentials *</label>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="credentialsStarted" id="credentialsYes" value="yes" required>
+                                                    <label class="form-check-label" for="credentialsYes">
+                                                        Yes
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input class="form-check-input" type="radio" name="credentialsStarted" id="credentialsNo" value="no" required>
+                                                    <label class="form-check-label" for="credentialsNo">
+                                                        No
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-floating">
+                                                    <textarea class="form-control border-0" placeholder="What Motivates You To Participate In The Review?" id="motivation" style="height: 100px"></textarea>
+                                                    <label for="motivation">What Motivates You To Participate In The Review?</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-floating">
+                                                    <textarea class="form-control border-0" placeholder="Do you have any comments or questions?" id="comments" style="height: 100px"></textarea>
+                                                    <label for="comments">Do you have any comments or questions?</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-primary w-100 py-3">
+                                                    <i class="fa fa-paper-plane me-2"></i>Submit Session Sign Up
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <!-- NCLEX Registration Form -->
+                            <div class="tab-pane fade" id="registration-form" role="tabpanel" aria-labelledby="registration-tab">
+                                <div class="bg-white rounded p-5 shadow-sm wow fadeInUp" data-wow-delay="0.2s">
+                                    <div class="text-center mb-4">
+                                        <h3 class="text-primary mb-2">NCLEX Registration Form</h3>
+                                        <p class="text-muted">Fill out the NCLEX registration form to kickstart your journey toward becoming a licensed nurse.</p>
+                                    </div>
+                                    
+                                    <form id="nclexRegistrationForm">
+                                        <div class="row g-3">
+                                            <div class="col-md-4">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control border-0" id="regFirstName" placeholder="First Name" required>
+                                                    <label for="regFirstName">First Name *</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control border-0" id="regMiddleName" placeholder="Middle Name">
+                                                    <label for="regMiddleName">Middle Name</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control border-0" id="regLastName" placeholder="Last Name" required>
+                                                    <label for="regLastName">Last Name *</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-floating">
+                                                    <input type="date" class="form-control border-0" id="dateOfBirth" placeholder="Date Of Birth" required>
+                                                    <label for="dateOfBirth">Date Of Birth *</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-floating">
+                                                    <input type="tel" class="form-control border-0" id="regPhone" placeholder="Phone Number" required>
+                                                    <label for="regPhone">Phone Number *</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-floating">
+                                                    <input type="email" class="form-control border-0" id="regEmail" placeholder="Email" required>
+                                                    <label for="regEmail">Email *</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-floating">
+                                                    <input type="email" class="form-control border-0" id="regEmailConfirm" placeholder="Confirm Email" required>
+                                                    <label for="regEmailConfirm">Confirm Email *</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control border-0" id="address" placeholder="Address" required>
+                                                    <label for="address">Address *</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label class="form-label">Do You Have Social Security Number? *</label>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="hasSSN" id="hasSSNYes" value="yes" required>
+                                                    <label class="form-check-label" for="hasSSNYes">
+                                                        Yes
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input class="form-check-input" type="radio" name="hasSSN" id="hasSSNNo" value="no" required>
+                                                    <label class="form-check-label" for="hasSSNNo">
+                                                        No
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label class="form-label">Do You Have Alien Number or USCIS Number? *</label>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="hasAlienNumber" id="hasAlienYes" value="yes" required>
+                                                    <label class="form-check-label" for="hasAlienYes">
+                                                        Yes
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-3">
+                                                    <input class="form-check-input" type="radio" name="hasAlienNumber" id="hasAlienNo" value="no" required>
+                                                    <label class="form-check-label" for="hasAlienNo">
+                                                        No
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-floating">
+                                                    <select class="form-select border-0" id="immigrationStatus" required>
+                                                        <option value="">Select Immigration Status *</option>
+                                                        <option value="citizen">U.S. Citizen</option>
+                                                        <option value="permanent-resident">Permanent Resident</option>
+                                                        <option value="visa-holder">Visa Holder</option>
+                                                        <option value="other">Other</option>
+                                                    </select>
+                                                    <label for="immigrationStatus">Immigration Status: *</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-primary w-100 py-3">
+                                                    <i class="fa fa-paper-plane me-2"></i>Submit NCLEX Registration
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Registration Forms End -->
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <a href="index.html" class="p-0">
+                            <img src="img/orchideelogo.png" alt="Orchidee LLC" style="height: 40px;">
+                        </a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-btn d-flex justify-content-center justify-content-md-end">
+                            <a class="btn btn-sm-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-sm-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-sm-square rounded-circle me-2" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-sm-square rounded-circle me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12 text-center">
+                        <p class="text-white mb-2">
+                            <a href="about.html" class="text-white me-3">About Us</a>
+                            <a href="blog.php" class="text-white me-3">Blog</a>
+                            <a href="contact.html" class="text-white">Contact</a>
+                        </p>
+                        <p class="text-white-50 mb-0 small">
+                            <i class="fas fa-copyright me-1"></i> 2025 Orchidee LLC. All rights reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+        
+        <script>
+            // Form validation and submission handlers
+            document.addEventListener('DOMContentLoaded', function() {
+                // Session Sign Up Form
+                document.getElementById('sessionSignUpForm').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form data
+                    const formData = {
+                        firstName: document.getElementById('sessionFirstName').value,
+                        lastName: document.getElementById('sessionLastName').value,
+                        email: document.getElementById('sessionEmail').value,
+                        phone: document.getElementById('sessionPhone').value,
+                        nursingSchool: document.getElementById('nursingSchool').value,
+                        yearsAttended: document.getElementById('yearsAttended').value,
+                        sessionType: document.querySelector('input[name="sessionType"]:checked').value,
+                        credentialsStarted: document.querySelector('input[name="credentialsStarted"]:checked').value,
+                        motivation: document.getElementById('motivation').value,
+                        comments: document.getElementById('comments').value
+                    };
+                    
+                    // Here you would typically send this to a server
+                    console.log('Session Sign Up Data:', formData);
+                    
+                    // Show success message
+                    alert('Thank you! Your session sign-up has been submitted successfully. We will contact you shortly.');
+                    
+                    // Reset form
+                    this.reset();
+                });
+                
+                // NCLEX Registration Form
+                document.getElementById('nclexRegistrationForm').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Validate email confirmation
+                    const email = document.getElementById('regEmail').value;
+                    const emailConfirm = document.getElementById('regEmailConfirm').value;
+                    
+                    if (email !== emailConfirm) {
+                        alert('Email addresses do not match. Please check and try again.');
+                        return;
+                    }
+                    
+                    // Get form data
+                    const formData = {
+                        firstName: document.getElementById('regFirstName').value,
+                        middleName: document.getElementById('regMiddleName').value,
+                        lastName: document.getElementById('regLastName').value,
+                        dateOfBirth: document.getElementById('dateOfBirth').value,
+                        phone: document.getElementById('regPhone').value,
+                        email: email,
+                        address: document.getElementById('address').value,
+                        hasSSN: document.querySelector('input[name="hasSSN"]:checked').value,
+                        hasAlienNumber: document.querySelector('input[name="hasAlienNumber"]:checked').value,
+                        immigrationStatus: document.getElementById('immigrationStatus').value
+                    };
+                    
+                    // Here you would typically send this to a server
+                    console.log('NCLEX Registration Data:', formData);
+                    
+                    // Show success message
+                    alert('Thank you! Your NCLEX registration has been submitted successfully. We will contact you shortly.');
+                    
+                    // Reset form
+                    this.reset();
+                });
+            });
+        </script>
+    </body>
+
+</html>
+
+
+
+
+
