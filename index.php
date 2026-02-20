@@ -169,6 +169,7 @@ if ($conn) {
         <link href="css/style.css" rel="stylesheet">
         <link href="css/hero.css" rel="stylesheet">
         <link href="css/annonces.css" rel="stylesheet">
+        <link href="css/gallery.css" rel="stylesheet">
         
         <style>
             /* ============================================================
@@ -768,6 +769,9 @@ if ($conn) {
             </div>
         </div>
         <!-- Testimonials & Comments Section End -->
+
+        <!-- Gallery -->
+        <?php include 'includes/gallery-section.php'; ?>
 
         <?php include 'includes/footer.php'; ?>
 

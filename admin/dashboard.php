@@ -179,6 +179,9 @@ try {
                             <a class="nav-link" href="annonces.php">
                                 <i class="fa fa-bullhorn me-2"></i>Announcements
                             </a>
+                            <a class="nav-link" href="gallery.php">
+                                <i class="fa fa-images me-2"></i>Gallery
+                            </a>
                             <a class="nav-link" href="categories.php">
                                 <i class="fa fa-tags me-2"></i>Categories
                             </a>
